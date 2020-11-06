@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: darkmagenta;
+}
+
+.header {
+    background-color: gray;
+    background-image: url('../img/bg/bg-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    height: 100vh;
+    min-height:900px;
+    border-bottom: 10px solid blueviolet;
+}
+
+.filter {
+    background-color:#000;
+    opacity:0.8;
+    width: 100%;
+    height: 100vh;
+    min-height:900px;
+}
+
+.header .nav {
+    margin: 30px auto;
+    padding-top: 20px; 
+    text-align: center; 
+}
+.header .nav a {
+    display: inline-block;
+    margin:6px;
+    padding: 10px;
+    color: #fff;
+}
+.header .nav a:hover, .header .nav a:active {
+    color: darkmagenta;
+}
+
+.header .content {
+    margin:auto;
+    text-align: center;
+    margin-top: 170px;
+    z-index:10;
+    width:80%;
+}
+.header .content h1 {
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+.header .content p {
+    font-size: 24px;
+    color: darkmagenta;
+    margin-top: 15px;
+}
+.header button {
+    background-color: darkmagenta;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    letter-spacing:2px;
+    text-align: center;
+    width:300px;
+    height:60px;
+    margin-top:20px;
+    border: 6px solid darkmagenta;
+    border-radius: 6px;
+}
+
+.header button:hover {
+    background-image: url('../img/bg/bg-image.png');
+    border:2px solid #fff;
+}
+
+.workout-container {
+    background-color: #fff;
+    width:90%;
+    height: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    margin: 10px auto;
+}
+
+/* ============== workou-contaier on large screens =================== */
+@media screen and (min-width:700px) {
+
+   .workout-container {
+        background-color: #fff;
+        width:35%;
+        float: left;
+        height: auto;
+        padding-bottom: 80px;
+        padding-top: 80px;
+        margin: 10px;
+    }
+}
+
+.workout-container .workout .circle-highlight {
+    width: 50%;
+    height: 50%;
+    padding: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
+.workout-container .workout h1 {
+    font-size: 100px;
+    text-align: center;
+    color:mediumvioletred;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    height:100px;
+    background-color: blueviolet;
+    padding-top: 1opx;
+    display: none;
+}
+
+footer a i {
+    font-size: 60px;
+    color: #fff;
+    margin:5px;
+}
