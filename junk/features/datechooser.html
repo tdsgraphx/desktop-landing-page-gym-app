@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+ <head> 
+  <title>Date Chooser</title> 
+
+  <script src="datechooser.js"></script>
+
+ <style type="text/css">
+
+      .mono{ font-family: monospace; }
+
+  </style>  
+
+ </head> 
+ <body> 
+
+  <form name="theForm">  
+     <table border="1" width="75%" style="border-collapse: collapse"> 
+      <tr> 
+        <td align="left" colspan=2> &nbsp;
+        </td> <td colspan=3> 
+           <center><b>
+             
+             <script language="JavaScript">
+               document.write( months[fixMonth( month.getMonth() )] + " " + 
+                             fixYear( month.getYear() ) );
+             </script>
+
+             </b></center>
+       </td>
+       <td align="right" colspan=2> &nbsp;
+
+       </td>
+       </tr>
+    <tr> 
+        <td width="14%"><b><i>Sun</i></b></td>
+        <td width="14%"><b><i>Mon</i></b></td>
+        <td width="14%"><b><i>Tue</i></b></td>
+        <td width="14%"><b><i>Wed</i></b></td>
+        <td width="14%"><b><i>Thu</i></b></td>
+        <td width="14%"><b><i>Fri</i></b></td>
+        <td width="14%"><b><i>Sat</i></b></td>
+    </tr>
+    <tr> 
+        <script language="JavaScript">
+
+             var startDay = month.getDay();
+
+             for( i = 0 ; i < startDay ; i++ ) {
+               document.write( "<td></td>" );
+             } 
+
+             var numDays = getNumberDays( month );
+
+             for( i = 1 ; i < numDays + 1 ; i++ ) {
+               
+              if( ( i + startDay ) % 7 == 1 ) {
+                     document.write( "</tr><tr>" );   
+              }
+                document.write(  
+                "<td><center>" + "<input type='button' " + "onClick='JavaScript: document.theForm.date.value=\"" + fixMonth( month.getMonth() + 1 ) + "/" + i + "/" +  fixYear( month.getYear() ) + "\"; onSelect();' " + "value='" + (i < 10 ? " " : "") + i + getEnding( i ) + "' " + "class='mono'>" + "</center></td>" );        } 
+      </script>
+
+     </tr>
+    </table>
+
+  <input type="hidden" name="date">
+ </form>
+
+ https://free.facebook.com/messages/read/?tid=cid.c.100006711706554%3A100019332018641&last_message_timestamp=1570625645038&pagination_direction=1&show_delete_message_button&refid=12&ref=unknown
+ 
+</body> 
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Calendar</title>
+
+    <script src="calendar.js"></script>
+
+  </head>
+  <body>
+
+    <table border="1" cellpadding="2" width="75%">
+
+      <tr>
+        <td colspan="7" align="center">
+          <font size="6"><b>
+
+          <script language="JavaScript">
+            document.write( months[month.getMonth()] + " " +  
+            fixYear( month.getYear() ) );
+          </script>
+
+          </b></font>
+         </td>
+      </tr>
+
+      <tr>
+        <td width="14%"><b><i>Sunday</i></b></td>
+        <td width="14%"><b><i>Monday</i></b></td>
+        <td width="14%"><b><i>Tuesday</i></b></td>
+        <td width="14%"><b><i>Wednesday</i></b></td>
+        <td width="14%"><b><i>Thursday</i></b></td>
+        <td width="14%"><b><i>Friday</i></b></td>
+        <td width="14%"><b><i>Saturday</i></b></td>
+      </tr>
+
+      <tr>
+        <script language="JavaScript">
+          
+          var startDay = month.getDay();
+          for( i = 0 ; i < startDay ; i++ ) {
+            document.write( "<td></td>" );
+          }
+
+          var numDays = getNumberDays( month );
+
+          for( i = 0 ; i < numDays ; i++ ) {
+            if( ( i + startDay + 1 ) % 7 == 1 ) {
+               document.write( "</tr><tr>" );
+             }
+               document.write( "<td height='75' valign='top'><b>" +
+                                     (i+1) + "</b></td>" ); 
+          }        
+        </script>
+        </tr>
+
+     </table>
+  </body>
+</html>
